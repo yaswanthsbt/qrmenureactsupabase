@@ -1,5 +1,6 @@
 {
   "projects": {
-    "leelacafe": "menuqr-17a7d"
+    "leelacafe": "menuqr-17a7d",
+    "default": "menuqr-17a7d"
   }
 }
