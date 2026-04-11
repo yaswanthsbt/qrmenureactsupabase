@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "leelacafe",
+    "site": "viyapuricafe",
     "public": "dist",
     "ignore": [
       "firebase.json",
