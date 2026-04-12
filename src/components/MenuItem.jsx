@@ -18,11 +18,11 @@ export default function MenuItem({ image, title, price, secondaryPrice }) {
       <div className="flex flex-col items-end gap-1 px-2 font-sans tracking-wider">
         {secondaryPrice ? (
           <div className="flex flex-col items-end text-sm">
-             <span className="text-[#ffd54f] font-semibold">{price}</span>
-             <span className="text-white/70 font-medium text-xs">{secondaryPrice}</span>
+             <span className="text-[#ffd54f] font-semibold">₹{price}</span>
+             <span className="text-white/70 font-medium text-xs">Double ₹{secondaryPrice}</span>
           </div>
         ) : (
-          <span className="text-[#ffd54f] font-semibold text-lg">{price}</span>
+          <span className="text-[#ffd54f] font-semibold text-lg">₹{price}</span>
         )}
       </div>
     </div>

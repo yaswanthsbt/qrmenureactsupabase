@@ -338,8 +338,8 @@ export default function AdminDashboard() {
                     <option value="" disabled>Select Category</option>
                     {categories.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                   </select>
-                  <input type="text" placeholder="Primary Price (e.g. ₹50)" required value={itemForm.price} onChange={e => setItemForm({...itemForm, price: e.target.value})} className="bg-white/5 border border-white/20 p-3 rounded-lg" />
-                  <input type="text" placeholder="Secondary Price (Optional)" value={itemForm.secondary_price} onChange={e => setItemForm({...itemForm, secondary_price: e.target.value})} className="bg-white/5 border border-white/20 p-3 rounded-lg" />
+                  <input type="text" placeholder="Primary Price (e.g. 50)" required value={itemForm.price} onChange={e => setItemForm({...itemForm, price: e.target.value})} className="bg-white/5 border border-white/20 p-3 rounded-lg" />
+                  <input type="text" placeholder="Secondary Price (Optional, e.g. 40)" value={itemForm.secondary_price} onChange={e => setItemForm({...itemForm, secondary_price: e.target.value})} className="bg-white/5 border border-white/20 p-3 rounded-lg" />
                   
                   <div className="md:col-span-2">
                     <label className="block text-sm text-white/50 mb-2">Image (Max 5MB)</label>
@@ -378,7 +378,7 @@ export default function AdminDashboard() {
                               </div>
                               
                               <div className="flex flex-col md:flex-row items-center gap-3">
-                                <div className="text-[#ffd54f] font-medium mr-4">{item.price}</div>
+                                <div className="text-[#ffd54f] font-medium mr-4">₹{item.price}</div>
                                 <div className="flex items-center gap-1 bg-white/5 rounded-lg mr-2 p-1">
                                   <button onClick={() => moveItem(item, 'up')} disabled={isFirst} className={`p-1.5 rounded disabled:opacity-30 ${isFirst ? '' : 'hover:bg-white/20'}`}><ArrowUp size={16}/></button>
                                   <button onClick={() => moveItem(item, 'down')} disabled={isLast} className={`p-1.5 rounded disabled:opacity-30 ${isLast ? '' : 'hover:bg-white/20'}`}><ArrowDown size={16}/></button>
