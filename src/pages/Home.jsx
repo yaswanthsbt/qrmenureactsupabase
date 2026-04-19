@@ -56,7 +56,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center pb-12">
       <Header 
         title="VIYA PURI CAFE" 
-        subtitle={<>Free Home Delivery above ₹ 300 /-<br/><p>Lalitha pet,Chowdavaram</p></>} 
+        subtitle={<>Free Home Delivery above  300 /-<br/><p>Lalitha pet,Chowdavaram</p></>} 
       />
       
       <main className="w-full max-w-6xl px-6">
@@ -129,7 +129,7 @@ export default function Home() {
                 {/* Text Content */}
                 <div className="absolute bottom-0 left-0 w-full p-5 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                   <h2 className="font-serif text-xl md:text-2xl font-bold tracking-wide text-white drop-shadow-lg mb-1">
-                    {cat.title.replace(/[�-]/g, '').trim()}
+                    {cat.title.trim()}
                   </h2>
                   <div className="w-8 h-0.5 bg-[#ffd54f] mx-auto scale-0 group-hover:scale-100 transition-transform duration-500 delay-100" />
                 </div>
@@ -141,7 +141,7 @@ export default function Home() {
               to="/game"
               className="group relative overflow-hidden rounded-xl aspect-[4/5] bg-gradient-to-br from-[#ffd54f]/80 to-[#ff9800]/80 border border-[#ffd54f]/30 transition-all duration-500 hover:scale-[1.02] hover:border-[#ffd54f]/50 shadow-2xl flex flex-col items-center justify-center"
             >
-              <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500 delay-75">🎮</div>
+              <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500 delay-75"></div>
               <h2 className="font-serif text-xl md:text-2xl font-bold tracking-wide text-black drop-shadow-sm mb-1">
                 Play Memory
               </h2>
@@ -182,7 +182,7 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-end space-y-3">
               <h3 className="font-serif text-lg md:text-xl font-bold tracking-wide text-white">Timing</h3>
               <div className="space-y-3 w-full flex flex-col items-center md:items-end">
-                <p className="text-white/70 text-sm font-medium">⏱️ It takes 15 min per order</p>
+                <p className="text-white/70 text-sm font-medium"> It takes 15 min per order</p>
                 <button
                   onClick={handleShare}
                   className="flex items-center gap-2 px-6 py-3 bg-[#ff9800]/20 border border-[#ff9800]/50 rounded-full text-[#ff9800] font-medium hover:bg-[#ff9800]/30 transition-all duration-300 hover:border-[#ff9800]/80"
@@ -197,7 +197,7 @@ export default function Home() {
           {/* Divider */}
           <div className="mt-8 pt-8 border-t border-white/10">
             <p className="text-center text-white/50 text-xs font-sans tracking-wide">
-              © 2026 Viya Puri Cafe. All rights reserved.
+               2026 Viya Puri Cafe. All rights reserved.
             </p>
           </div>
         </div>
