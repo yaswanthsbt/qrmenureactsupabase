@@ -44,12 +44,12 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center pb-12">
       <Header 
         title="VIYA PURI CAFE" 
-        subtitle="Free Home Delivery above ₹ 200 /-" 
+        subtitle={<>Free Home Delivery above ₹ 300 /-<br/><p>Lalitha pet,Chowdavaram</p></>}
       />
       
       <main className="w-full max-w-6xl px-6">
+
         
-        {/* Luxury Search Bar */}
         <div className="max-w-2xl mx-auto mb-10 relative group">
           <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none text-white/50 group-focus-within:text-[#ffd54f] transition-colors">
             <Search size={20} />
