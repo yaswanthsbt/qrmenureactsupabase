@@ -45,16 +45,37 @@ export default function Category() {
 
       <section className="max-w-4xl mx-auto px-4 mt-8">
         {items.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 bg-black/40 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-3xl shadow-2xl">
-            {items.map((item, index) => (
-              <MenuItem 
-                key={index}
-                image={item.image}
-                title={item.title}
-                price={item.price}
-                secondaryPrice={item.secondary_price}
-              />
-            ))}
+          <div className="flex flex-col gap-4 bg-black/40 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-3xl shadow-2xl">
+            {/* Table Header for Labeled Categories */}
+            {(categoryMeta.primary_label || categoryMeta.secondary_label) && (
+              <div className="hidden md:flex items-center gap-5 px-3 py-2 border-b border-white/10 text-white/40 text-[10px] uppercase tracking-[0.2em] font-sans">
+                <div className="w-20 shrink-0"></div>
+                <div className="flex-1">Item</div>
+                <div className="flex flex-col items-end gap-1 px-2 w-32">
+                   <div className="flex flex-col items-end">
+                      <span>{categoryMeta.primary_label || 'Primary'}</span>
+                   </div>
+                   {categoryMeta.secondary_label && (
+                      <div className="flex flex-col items-end border-t border-white/5 mt-1 pt-1 w-full text-right">
+                         <span>{categoryMeta.secondary_label}</span>
+                      </div>
+                   )}
+                </div>
+              </div>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+              {items.map((item, index) => (
+                <MenuItem 
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  secondaryPrice={item.secondary_price}
+                  primaryLabel={categoryMeta.primary_label}
+                  secondaryLabel={categoryMeta.secondary_label}
+                />
+              ))}
+            </div>
           </div>
         ) : (
           <div className="text-center bg-black/40 backdrop-blur-xl p-16 rounded-3xl border border-white/10 shadow-2xl">
