@@ -54,10 +54,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center pb-12">
-      <Header 
-        title="VIYA PURI CAFE" 
-        subtitle={<>Free Home Delivery above  300 /-<br/><p>Lalitha pet,Chowdavaram</p></>} 
-      />
+      <Header title="VIYA PURI CAFE" />
       
       <main className="w-full max-w-6xl px-6">
 
@@ -154,6 +151,11 @@ export default function Home() {
       {/* Footer Section */}
       <footer className="w-full max-w-6xl px-6 mt-16 pt-12 border-t border-white/10">
         <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
+          <div className="text-center mb-8">
+            <p className="text-[#ffd54f] font-medium">Free Home Delivery above 300 /-</p>
+            <p className="text-white/70 text-sm mt-1">Lalitha pet,Chowdavaram</p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Catering Services */}
             <div className="flex flex-col items-center md:items-start space-y-3">
